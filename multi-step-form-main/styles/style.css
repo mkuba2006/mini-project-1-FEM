@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
 body {
   background-color: grey;
   font-family: "Montserrat", sans-serif;
@@ -8,7 +10,7 @@ body {
   width: 80%;
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
+  margin: 5% auto 0 auto;
   border-radius: 15px;
   background-color: azure;
 }
@@ -30,7 +32,7 @@ body {
   flex-direction: row;
 }
 #container #lines ul li p {
-  font-size: 20px;
+  font-size: 30px;
   margin-right: 25px;
   display: flex;
   justify-content: center;
@@ -42,6 +44,7 @@ body {
   border: 1px solid white;
   background: none;
   background-color: rgba(255, 228, 196, 0);
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 #container #lines ul li .active {
   color: black;
@@ -67,17 +70,19 @@ body {
   color: white;
 }
 #container #main {
-  padding: 50px;
+  padding: 50px 150px;
   width: 60%;
-  margin: 0 auto;
+  border-radius: 15px;
+  background-color: white;
 }
 #container #main div #main_title {
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: 800;
   padding: 0;
   margin: 0;
 }
 #container #main div #main_h5 {
-  font-size: 10px;
+  font-size: 15px;
   color: rgb(94, 94, 94);
   padding: 0;
   margin: 0 0 25px 0;
@@ -88,16 +93,35 @@ body {
   width: 80%;
   margin: 25px 0;
 }
+#container #main div form div label {
+  font-weight: 800;
+}
 #container #main div form div input {
   margin-top: 3px;
+  font-size: 17px;
   border: 1px gray solid;
   padding: 8px 16px;
   border-radius: 5px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
-#container #main div form #submit {
-  padding: 6px 10px;
-  background: none;
+#container #main div form #but {
+  align-items: flex-end;
+}
+#container #main div form #sub1 {
+  display: flex;
+  justify-content: flex-end;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: rgb(143, 135, 135);
+  border: none;
+  transition: 0.3s;
+  color: white;
+  font-size: 20px;
+}
+#container #main div form #sub1:hover {
+  background-color: #0079FF;
 }
 #container #step_2 {
   display: flex;
@@ -119,4 +143,24 @@ body {
 #container #step_2 #options .active {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   background-color: blanchedalmond;
+}
+#container #step_2 #buttons2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 5px;
+}
+#container #step_2 #buttons2 #return2, #container #step_2 #buttons2 #Next2 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #c7baba;
+  border: none;
+  transition: 0.3s;
+  color: white;
+  font-size: 20px;
+}
+#container #step_2 #buttons2 #return2:hover, #container #step_2 #buttons2 #Next2:hover {
+  background-color: #0079FF;
 }/*# sourceMappingURL=style.css.map */

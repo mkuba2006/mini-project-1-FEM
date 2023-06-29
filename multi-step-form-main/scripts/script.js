@@ -1,5 +1,8 @@
 const main = document.getElementById('main');
 let s1val =[];
+let can1 = 0;
+let can2 = 0;
+let can3 = 0;
 
 const step_1 = document.createElement('div');
 step_1.id = 'step_1';
@@ -22,8 +25,9 @@ step_1.innerHTML = `
       <label>Phone Number</label>
       <input id='main_number' type="number" placeholder="e.g. +1 234 567 890" />
     </div>
-
-    <input id='submit sub1' type="submit" class='but1'/>
+    <div id='but'>
+      <input id='sub1' type="submit" class='but1' value="Next Step"/>
+    </div>
   </form>
 `;
 main.appendChild(step_1);
@@ -61,7 +65,10 @@ step_2.innerHTML = `
   <div id='my'>
 
   </div>
-  <button id='return2'>return</button>
+  <div id='buttons2'>
+    <button id='return2'>Go Back</button>
+    <button id='Next2'>Next Step</button>
+  </div>
 `;
 
 
@@ -77,59 +84,86 @@ step_2.innerHTML = `
 
 document.addEventListener("DOMContentLoaded", function() {
     const form1 = document.querySelector("#form1");
-    const but1 = document.querySelector("#submit\\ sub1");
+    const but1 = document.getElementById("sub1");
+    const phone = document.getElementById('main_number');
+    const name = document.getElementById('main_name');
+    const mail = document.getElementById('main_mail');
+    const checkLength = (value, minLength) => value.length < minLength ? 0 : 1;
+    const Number = () => { can1 = checkLength(phone.value, 9);};
+    const Name = () => { can2 = checkLength(name.value, 10);};
+    const Mail = () => { can3 = checkLength(mail.value, 5);};
   
+    mail.addEventListener('input', Mail);
+    name.addEventListener('input', Name);
+    phone.addEventListener('input', Number);
+    
+
+
     but1.addEventListener('click', () => {
-      const s1name = document.getElementById('main_name').value;
-      const s1email = document.getElementById('main_mail').value;
-      const s1number = document.getElementById('main_number').value;
-      s1val = [s1name, s1email, s1number];
+      if(can1 == 1 && can2 == 1 && can3 == 1){
+        but1.style.backgroundColor = 'blue';
+        const s1name = document.getElementById('main_name').value;
+        const s1email = document.getElementById('main_mail').value;
+        const s1number = document.getElementById('main_number').value;
+        const one = document.getElementById('one');
+        const two = document.getElementById('two');
+        s1val = [s1name, s1email, s1number];
 
-      main.removeChild(step_1);
-      document.getElementById('one').classList.remove('active');
-      main.appendChild(step_2);
-      document.getElementById('two').classList.toggle('active');
-  
-      const ret2 = document.querySelector("#return2");
-      ret2.addEventListener('click', () => {
-        console.log('clicked');
-        main.removeChild(step_2);
-        document.getElementById('one').classList.add('active');
-        main.appendChild(step_1);
-        document.getElementById('two').classList.toggle('active');
-      });
-
-
-      if (main.contains(step_2)) {
-        const elements = document.querySelectorAll('#options div');
-        elements.forEach(el => {
-          el.addEventListener('click', () => {
-            elements.forEach(otherEl => {
-              if (otherEl !== el) {
-                otherEl.classList.remove('active');
-              }
-            });
-            el.classList.toggle('active');
-          });
+        main.removeChild(step_1);
+        one.classList.remove('active');
+        main.appendChild(step_2);
+        two.classList.toggle('active');
+    
+        const ret2 = document.querySelector("#return2");
+        ret2.addEventListener('click', () => {
+          console.log('clicked');
+          main.removeChild(step_2);
+          one.classList.add('active');
+          main.appendChild(step_1);
+          two.classList.toggle('active');
         });
+
+
+        if (main.contains(step_2)) {
+          const elements = document.querySelectorAll('#options div');
+          elements.forEach(el => {
+            el.addEventListener('click', () => {
+              elements.forEach(otherEl => {
+                if (otherEl !== el) {
+                  otherEl.classList.remove('active');
+                }
+              });
+              el.classList.toggle('active');
+            });
+          });
+        }else{
+          const elements = document.querySelectorAll('#options div');
+          elements.forEach(el => {
+            el.addEventListener('click', () => {
+              elements.forEach(otherEl => {
+                if (otherEl !== el) {
+                  otherEl.classList.remove('active');
+                }
+              });
+              el.classList.toggle('active');
+            });
+          });
+        }
       }else{
-        const elements = document.querySelectorAll('#options div');
-        elements.forEach(el => {
-          el.addEventListener('click', () => {
-            elements.forEach(otherEl => {
-              if (otherEl !== el) {
-                otherEl.classList.remove('active');
-              }
-            });
-            el.classList.toggle('active');
-          });
-        });
+        console.log('nie');
+        const originalColor = but1.style.backgroundColor;
+        but1.style.backgroundColor = 'red';
+        but1.value='Invalid Logs';
+        setTimeout(() => {
+          but1.style.backgroundColor = originalColor;
+          but1.value='Next Step';
+        }, 1000);
       }
-
-
-
     });
-  
+
+
+
+
     form1.addEventListener('submit', (e) => {e.preventDefault()});
 });
   

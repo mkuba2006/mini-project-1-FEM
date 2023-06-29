@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 body{
     background-color: grey;
     font-family: 'Montserrat', sans-serif;
@@ -7,7 +9,7 @@ body{
     width: 80%;
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
+    margin: 5% auto 0 auto;
     border-radius: 15px;
     background-color: azure;
     #lines{
@@ -25,7 +27,7 @@ body{
                 color: white;
                 flex-direction: row;
                 p{
-                    font-size: 20px;
+                    font-size: 30px;
                     margin-right: 25px;
                     display: flex;
                     justify-content: center;
@@ -37,6 +39,7 @@ body{
                     border: 1px solid white;
                     background: none;
                     background-color: rgba(255, 228, 196, 0);
+                    font-family: 'M PLUS Rounded 1c', sans-serif;
                 }
                 .active{
                     color: black;
@@ -65,17 +68,19 @@ body{
         }
     }
     #main{
-        padding: 50px;
+        padding: 50px 150px;
         width: 60%;
-        margin: 0 auto;
+        border-radius: 15px;
+        background-color: white;
         div{
             #main_title{
-                font-size: 25px;
+                font-size: 30px;
+                font-weight: 800;
                 padding: 0;
                 margin: 0;
             }
             #main_h5{
-                font-size: 10px;
+                font-size: 15px;
                 color: rgb(94, 94, 94);
                 padding: 0;
                 margin: 0 0 25px 0;
@@ -86,17 +91,35 @@ body{
                     flex-direction: column;
                     width: 80%;
                     margin: 25px 0;
+                    label{
+                        font-weight: 800;
+                    }
                     input{
                         margin-top: 3px;
+                        font-size: 17px;
                         border: 1px gray solid;
                         padding: 8px 16px;
                         border-radius: 5px;
-                        font-family: 'Roboto', sans-serif;
+                        font-family: 'Ubuntu', sans-serif;
                     }
                 }
-                #submit{
-                    padding: 6px 10px;
-                    background: none;
+                #but{
+                    align-items: flex-end;
+                }
+                #sub1{
+                    display: flex;
+                    justify-content: flex-end;
+                    width: min-content;
+                    padding: 12px 20px;
+                    border-radius: 5px;
+                    background-color: rgb(143, 135, 135);
+                    border: none;
+                    transition: 0.3s;
+                    color: white;
+                    font-size: 20px;
+                }
+                #sub1:hover{
+                    background-color: #0079FF;
                 }
             }
         }
@@ -119,6 +142,26 @@ body{
             .active{
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
                 background-color: blanchedalmond;
+            }
+        }
+        #buttons2{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 5px;
+            #return2, #Next2{
+                display: flex;
+                justify-content: flex-end;
+                padding: 12px 20px;
+                border-radius: 5px;
+                background-color: #c7baba;
+                border: none;
+                transition: 0.3s;
+                color: white;
+                font-size: 20px;
+            }
+            #return2:hover, #Next2:hover{
+                background-color: #0079FF;
             }
         }
     }
