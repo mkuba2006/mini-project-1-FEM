@@ -76,13 +76,14 @@ body {
   background-color: white;
 }
 #container #main div #main_title {
-  font-size: 30px;
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: 900;
   padding: 0;
   margin: 0;
+  color: #220f75;
 }
 #container #main div #main_h5 {
-  font-size: 15px;
+  font-size: 17px;
   color: rgb(94, 94, 94);
   padding: 0;
   margin: 0 0 25px 0;
@@ -137,12 +138,23 @@ body {
   width: 20%;
   height: 160px;
   padding: 20px;
-  border: 1px solid black;
+  border: 1px solid #cadef7;
   border-radius: 7px;
+}
+#container #step_2 #options #first div, #container #step_2 #options #second div, #container #step_2 #options #third div {
+  margin: 40% 0 0 0;
+  color: #220f75;
+}
+#container #step_2 #options #first div h3, #container #step_2 #options #second div h3, #container #step_2 #options #third div h3 {
+  margin: 0;
+  padding: 0;
+}
+#container #step_2 #options #first div h5, #container #step_2 #options #second div h5, #container #step_2 #options #third div h5 {
+  margin: 0;
 }
 #container #step_2 #options .active {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  background-color: blanchedalmond;
+  background-color: #cadef7;
 }
 #container #step_2 #buttons2 {
   display: flex;
