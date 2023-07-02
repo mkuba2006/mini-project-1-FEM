@@ -19,7 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 15px 0 0 15px;
-  width: 26%;
+  width: 36%;
 }
 #container #lines ul {
   display: flex;
@@ -134,27 +134,32 @@ body {
   justify-content: space-around;
   margin-bottom: 30px;
 }
-#container #step_2 #options #first, #container #step_2 #options #second, #container #step_2 #options #third {
+#container #step_2 #options #Arcade, #container #step_2 #options #Advanced, #container #step_2 #options #Pro {
   width: 20%;
   height: 160px;
   padding: 20px;
-  border: 1px solid #cadef7;
+  border: 1px solid #042a58;
   border-radius: 7px;
+  transition: 0.3s;
 }
-#container #step_2 #options #first div, #container #step_2 #options #second div, #container #step_2 #options #third div {
+#container #step_2 #options #Arcade div, #container #step_2 #options #Advanced div, #container #step_2 #options #Pro div {
   margin: 40% 0 0 0;
   color: #220f75;
 }
-#container #step_2 #options #first div h3, #container #step_2 #options #second div h3, #container #step_2 #options #third div h3 {
+#container #step_2 #options #Arcade div h3, #container #step_2 #options #Advanced div h3, #container #step_2 #options #Pro div h3 {
   margin: 0;
   padding: 0;
 }
-#container #step_2 #options #first div h5, #container #step_2 #options #second div h5, #container #step_2 #options #third div h5 {
+#container #step_2 #options #Arcade div h5, #container #step_2 #options #Advanced div h5, #container #step_2 #options #Pro div h5 {
   margin: 0;
 }
 #container #step_2 #options .active {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   background-color: #cadef7;
+  scale: 1.05;
+}
+#container #step_2 #options .notactive {
+  scale: 0.95;
 }
 #container #step_2 #buttons2 {
   display: flex;

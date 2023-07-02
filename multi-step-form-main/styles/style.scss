@@ -17,7 +17,7 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 15px 0 0 15px;
-        width: 26%;
+        width: 36%;
         ul{
             display: flex;
             flex-direction: column;
@@ -133,12 +133,13 @@ body{
             flex-direction: row; 
             justify-content: space-around;
             margin-bottom: 30px;
-            #first, #second, #third{
+            #Arcade, #Advanced, #Pro{
                 width: 20%;
                 height: 160px;
                 padding: 20px;
-                border: 1px solid #cadef7;
+                border: 1px solid #042a58;
                 border-radius: 7px;
+                transition: 0.3s;
                 div{
                     margin: 40% 0 0 0;
                     color: #220f75;
@@ -154,6 +155,10 @@ body{
             .active{
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
                 background-color: #cadef7;
+                scale: 1.05;
+            }
+            .notactive{
+                scale: 0.95;
             }
         }
         #buttons2{
