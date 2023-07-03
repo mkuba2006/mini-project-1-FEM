@@ -6,7 +6,7 @@ let can3 = 0;
 let switch_result = 'monthly';
 let type = '';
 let sec_ans = [];
-
+let sum;
 
 const step_1 = document.createElement('div');
 step_1.id = 'step_1';
@@ -79,8 +79,54 @@ step_2.innerHTML = `
   </div>
 `;
 
+const step_3 = document.createElement('div');
+step_3.id = 'step_3';
+step_3.innerHTML = `
+  <h1 id='main_title'>Pick add-ons</h1>
+  <h5 id='main_h5'>Add-ons help enhance your gaming experience.</h5>
 
+  <form id='form3'>
+    <div id='el3'>
+      <input id='check3' type="checkbox" name="Online service" value="1"/>
+      <div id="conotent3">
+        <h2>Online service</h2>
+        <h4>Access to multiplayer games</h4>
+      </div>
+      <p>+$1/mo</p>
+    </div>
 
+    <div id='el3'>
+      <input id='check3' type="checkbox" name="Larger storage" value="2"/>
+      <div id="conotent3">
+        <h2>Larger storage</h2>
+        <h4>Extra 1TB of cloud save</h4>
+      </div>
+      <p>+$2/mo</p>
+    </div>
+
+  <div id='el3'>
+    <input id='check3' type="checkbox" name="Customizable Profile" value="2"/>
+    <div id="conotent3">
+      <h2>Customizable Profile</h2>
+      <h4>Custom theme on your profile</h4>
+    </div>
+    <p>+$2/mo</p>
+  </div>
+  </form>
+
+  <div id='buttons3'>
+    <button id='return3'>Go Back</button>
+    <button id='Next3'>Next Step</button>
+  </div>
+`;
+
+const step_4 = document.createElement('div');
+step_4.id = 'step_4';
+step_4.innerHTML = `
+  <h1 id='main_title'>Finishing up</h1>
+  <h5 id='main_h5'>Double-check everything looks OK before confirming.</h5>
+  <div id="sumapl">12312</div>
+`;
 
 
 
@@ -115,23 +161,24 @@ document.addEventListener("DOMContentLoaded", function() {
         const s1number = document.getElementById('main_number').value;
         const one = document.getElementById('one');
         const two = document.getElementById('two');
+        const three = document.getElementById('three');
         s1val = [s1name, s1email, s1number];
+        console.log(s1val);
 
         if (main.contains(step_1)) {
           main.removeChild(step_1);
         }
         main.appendChild(step_2);
-        two.classList.toggle('active');
+        two.classList.add('active');
     
         const ret2 = document.querySelector("#return2");
         ret2.addEventListener('click', () => {
-          console.log('clicked');
           if (main.contains(step_2)) {
             main.removeChild(step_2);
           }
           one.classList.add('active');
           main.appendChild(step_1);
-          two.classList.toggle('active');
+          two.classList.remove('active');
         });
 
 
@@ -170,15 +217,74 @@ document.addEventListener("DOMContentLoaded", function() {
             });
           });
           back.addEventListener('click',()=>{
+            console.log(sec_ans);
             main.appendChild(step_1);
             sec_ans=[type, switch_result]
-            console.log(sec_ans);
             if (main.contains(step_2)) {
               main.removeChild(step_2);
             }
           })
 
+          next.addEventListener('click',()=>{
+            sec_ans=[type, switch_result]
+            console.log(sec_ans);
+            if (main.contains(step_2)) {
+              main.appendChild(step_3);
+              three.classList.add('active');
+              const bck = document.querySelector("#return3");
+              const next = document.getElementById("Next3");
 
+              bck.addEventListener('click',()=>{
+                // sum=0;
+                if (main.contains(step_3)) {
+                  main.removeChild(step_3);
+                }
+                main.appendChild(step_2);
+                three.classList.remove('active');
+              })
+
+              if (main.contains(step_2)) {
+                main.removeChild(step_2);
+              }
+
+
+              const check = document.querySelectorAll('#check3');
+              check.forEach(ch=>{
+                ch.addEventListener('click',()=>{
+                  ch.classList.toggle('can');
+                  const el3 = ch.parentNode;
+                  if (ch.checked) {
+                    el3.classList.add('checked');
+                  } else {
+                    el3.classList.remove('checked');
+                  }
+                })
+              })
+              
+              next.addEventListener('click',()=>{
+
+                sum = 0;
+                check.forEach(ch=>{
+                  if (ch.classList.contains('can')) {
+                    sum += parseInt(ch.value);
+                    console.log(sum);
+                  }
+                })
+                let can3AsString = sum.toString();
+                console.log(can3AsString);
+                const step_4 = document.createElement('div');
+                step_4.id = 'step_4';
+                step_4.innerHTML = `
+                  <h1 id='main_title'>Finishing up</h1>
+                  <h5 id='main_h5'>Double-check everything looks OK before confirming.</h5>
+                  <div id="sumapl">${sum}</div>
+                `;
+                main.removeChild(step_3);
+                main.appendChild(step_4);
+                console.log(sum);
+              })
+            }
+          })
 
 
 

@@ -164,9 +164,9 @@ body{
         #buttons2{
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
+            justify-content: space-between;
             gap: 5px;
-            #return2, #Next2{
+            #Next2{
                 display: flex;
                 justify-content: flex-end;
                 padding: 12px 20px;
@@ -177,7 +177,93 @@ body{
                 color: white;
                 font-size: 20px;
             }
+            #return2{
+                display: flex;
+                justify-content: flex-end;
+                padding: 12px 20px;
+                border-radius: 5px;
+                border: none;
+                background: none;
+                transition: 0.3s;
+                color: #c7baba;
+                font-size: 20px;
+            }
             #return2:hover, #Next2:hover{
+                background-color: #0079FF;
+            }
+        }
+    }
+    #step_3{
+        form{
+            display: flex;
+            flex-direction: column;
+            #el3{
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                column-gap: 25px;
+                border: 1px solid #042a58;
+                border-radius: 7px;
+                padding: 1px 16px;
+                margin: 7px;
+                input{
+                    background-color: #c7baba;
+                    appearance: checkbox;
+                    width: 20px;
+                    height: 20px;
+                }
+                div{
+                    h2,h4{
+                        padding: 0;
+                        margin: 0;
+                    }
+                    h2{
+                        font-size: 20px;
+                    }
+                    h4{
+                        font-size: 13px;
+                        color: #888d92;
+                    }
+                }
+                p{
+                    color: #042a58;
+                    font-weight: 800;
+                }
+            }
+            #el3.checked{
+                background-color: #ECF2FF;
+            }
+        }
+        #buttons3{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 5px;
+            #Next3{
+                display: flex;
+                justify-content: flex-end;
+                padding: 12px 20px;
+                border-radius: 5px;
+                background-color: #c7baba;
+                border: none;
+                transition: 0.3s;
+                color: white;
+                font-size: 20px;
+            }
+            #return3{
+                display: flex;
+                justify-content: flex-end;
+                padding: 12px 20px;
+                border-radius: 5px;
+                border: none;
+                background: none;
+                transition: 0.3s;
+                color: #c7baba;
+                font-size: 20px;
+            }
+            #return3:hover, #Next3:hover{
                 background-color: #0079FF;
             }
         }

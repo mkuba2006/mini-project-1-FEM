@@ -164,10 +164,10 @@ body {
 #container #step_2 #buttons2 {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 5px;
 }
-#container #step_2 #buttons2 #return2, #container #step_2 #buttons2 #Next2 {
+#container #step_2 #buttons2 #Next2 {
   display: flex;
   justify-content: flex-end;
   padding: 12px 20px;
@@ -178,6 +178,91 @@ body {
   color: white;
   font-size: 20px;
 }
+#container #step_2 #buttons2 #return2 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  background: none;
+  transition: 0.3s;
+  color: #c7baba;
+  font-size: 20px;
+}
 #container #step_2 #buttons2 #return2:hover, #container #step_2 #buttons2 #Next2:hover {
+  background-color: #0079FF;
+}
+#container #step_3 form {
+  display: flex;
+  flex-direction: column;
+}
+#container #step_3 form #el3 {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  border: 1px solid #042a58;
+  border-radius: 7px;
+  padding: 1px 16px;
+  margin: 7px;
+}
+#container #step_3 form #el3 input {
+  background-color: #c7baba;
+  -webkit-appearance: checkbox;
+     -moz-appearance: checkbox;
+          appearance: checkbox;
+  width: 20px;
+  height: 20px;
+}
+#container #step_3 form #el3 div h2, #container #step_3 form #el3 div h4 {
+  padding: 0;
+  margin: 0;
+}
+#container #step_3 form #el3 div h2 {
+  font-size: 20px;
+}
+#container #step_3 form #el3 div h4 {
+  font-size: 13px;
+  color: #888d92;
+}
+#container #step_3 form #el3 p {
+  color: #042a58;
+  font-weight: 800;
+}
+#container #step_3 form #el3.checked {
+  background-color: #ECF2FF;
+}
+#container #step_3 #buttons3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+#container #step_3 #buttons3 #Next3 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #c7baba;
+  border: none;
+  transition: 0.3s;
+  color: white;
+  font-size: 20px;
+}
+#container #step_3 #buttons3 #return3 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  background: none;
+  transition: 0.3s;
+  color: #c7baba;
+  font-size: 20px;
+}
+#container #step_3 #buttons3 #return3:hover, #container #step_3 #buttons3 #Next3:hover {
   background-color: #0079FF;
 }/*# sourceMappingURL=style.css.map */
