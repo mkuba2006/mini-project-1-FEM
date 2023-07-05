@@ -265,4 +265,82 @@ body {
 }
 #container #step_3 #buttons3 #return3:hover, #container #step_3 #buttons3 #Next3:hover {
   background-color: #0079FF;
+}
+#container #step_4 #suma {
+  width: 100%;
+  background-color: #F5F5F5;
+  border-radius: 7px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#container #step_4 #suma #sumapl {
+  padding: 0 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#container #step_4 #suma #sumapl b {
+  width: 70%;
+  color: #220f75;
+  font-weight: bold;
+  font-size: 20px;
+}
+#container #step_4 #suma #sumapl p {
+  display: flex;
+  justify-content: flex-end;
+  color: #220f75;
+  font-weight: bold;
+  font-size: 15px;
+}
+#container #step_4 #suma #line {
+  margin: 0px auto 30px;
+  width: 90%;
+  height: 1px;
+  background: #FEA1A1;
+}
+#container #step_4 #buttons4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+#container #step_4 #buttons4 #Next4 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #c7baba;
+  border: none;
+  transition: 0.3s;
+  color: white;
+  font-size: 20px;
+}
+#container #step_4 #buttons4 #return4 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  background: none;
+  transition: 0.3s;
+  color: #c7baba;
+  font-size: 20px;
+}
+#container #step_4 #buttons4 #return4:hover, #container #step_4 #buttons4 #Next4:hover {
+  background-color: #0079FF;
+}
+#container #step_4 #elem123 {
+  padding: 0 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+#container #step_4 #elem123 #item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

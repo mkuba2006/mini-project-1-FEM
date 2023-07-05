@@ -8,6 +8,8 @@ let type = '';
 let sec_ans = [];
 let sum;
 
+
+
 const step_1 = document.createElement('div');
 step_1.id = 'step_1';
 step_1.innerHTML = `
@@ -48,21 +50,21 @@ step_2.innerHTML = `
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#FFAF7E"/><path fill="#FFF" fill-rule="nonzero" d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z"/></g></svg>
         <div id='content'>
             <h3>Arcade</h3>
-            <h5>$9/mo<h5>
+            <h5>$<b>9</b>/mo<h5>
         </div>
     </div>
     <div id='Advanced'>
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#F9818E"/><path fill="#FFF" fill-rule="nonzero" d="M25.057 15H14.944C12.212 15 10 17.03 10 19.885c0 2.857 2.212 4.936 4.944 4.936h10.113c2.733 0 4.943-2.08 4.943-4.936S27.79 15 25.057 15ZM17.5 20.388c0 .12-.108.237-.234.237h-1.552v1.569c0 .126-.138.217-.259.217H14.5c-.118 0-.213-.086-.213-.203v-1.583h-1.569c-.126 0-.217-.139-.217-.26v-.956c0-.117.086-.213.202-.213h1.584v-1.554c0-.125.082-.231.203-.231h.989c.12 0 .236.108.236.234v1.551h1.555c.125 0 .231.083.231.204v.988Zm5.347.393a.862.862 0 0 1-.869-.855c0-.472.39-.856.869-.856.481 0 .87.384.87.856 0 .471-.389.855-.87.855Zm1.9 1.866a.86.86 0 0 1-.87-.852.86.86 0 0 1 .87-.855c.48 0 .87.38.87.855a.86.86 0 0 1-.87.852Zm0-3.736a.862.862 0 0 1-.87-.854c0-.472.39-.856.87-.856s.87.384.87.856a.862.862 0 0 1-.87.854Zm1.899 1.87a.862.862 0 0 1-.868-.855c0-.472.389-.856.868-.856s.868.384.868.856a.862.862 0 0 1-.868.855Z"/></g></svg>
         <div id='content'>
             <h3>Advanced</h3>
-            <h5>$12/mo<h5>
+            <h5>$<b>12</b>/mo<h5>
     </div>
     </div>
     <div id='Pro'>
         <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><circle cx="20" cy="20" r="20" fill="#483EFF"/><path fill="#FFF" fill-rule="nonzero" d="M26.666 13H13.334A3.333 3.333 0 0 0 10 16.333v7.193a3.447 3.447 0 0 0 2.14 3.24c1.238.5 2.656.182 3.56-.8L18.52 23h2.96l2.82 2.966a3.2 3.2 0 0 0 3.56.8 3.447 3.447 0 0 0 2.14-3.24v-7.193A3.333 3.333 0 0 0 26.666 13Zm-9.333 6H16v1.333a.667.667 0 0 1-1.333 0V19h-1.333a.667.667 0 0 1 0-1.334h1.333v-1.333a.667.667 0 1 1 1.333 0v1.333h1.333a.667.667 0 1 1 0 1.334Zm7.333 2a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333ZM26 18.333a1.333 1.333 0 1 1-2.667 0 1.333 1.333 0 0 1 2.667 0Z"/></g></svg>
         <div id='content'>
             <h3>Pro</h3>
-            <h5>$15/mo<h5>
+            <h5>$<b>15</b>/mo<h5>
         </div>
     </div>
   </div>
@@ -88,7 +90,7 @@ step_3.innerHTML = `
   <form id='form3'>
     <div id='el3'>
       <input id='check3' type="checkbox" name="Online service" value="1"/>
-      <div id="conotent3">
+      <div id="content3">
         <h2>Online service</h2>
         <h4>Access to multiplayer games</h4>
       </div>
@@ -97,7 +99,7 @@ step_3.innerHTML = `
 
     <div id='el3'>
       <input id='check3' type="checkbox" name="Larger storage" value="2"/>
-      <div id="conotent3">
+      <div id="content3">
         <h2>Larger storage</h2>
         <h4>Extra 1TB of cloud save</h4>
       </div>
@@ -106,7 +108,7 @@ step_3.innerHTML = `
 
   <div id='el3'>
     <input id='check3' type="checkbox" name="Customizable Profile" value="2"/>
-    <div id="conotent3">
+    <div id="content3">
       <h2>Customizable Profile</h2>
       <h4>Custom theme on your profile</h4>
     </div>
@@ -119,15 +121,6 @@ step_3.innerHTML = `
     <button id='Next3'>Next Step</button>
   </div>
 `;
-
-const step_4 = document.createElement('div');
-step_4.id = 'step_4';
-step_4.innerHTML = `
-  <h1 id='main_title'>Finishing up</h1>
-  <h5 id='main_h5'>Double-check everything looks OK before confirming.</h5>
-  <div id="sumapl">12312</div>
-`;
-
 
 
 
@@ -205,6 +198,7 @@ document.addEventListener("DOMContentLoaded", function() {
           })
           elements.forEach(el => {
             el.addEventListener('click', () => {
+              window.b = el.querySelector('div #content h5 b').textContent;
               elements.forEach(otherEl => {
                 if (otherEl !== el) {
                   otherEl.classList.remove('active');
@@ -249,20 +243,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
               const check = document.querySelectorAll('#check3');
-              check.forEach(ch=>{
-                ch.addEventListener('click',()=>{
+              let tab = [];
+              check.forEach(ch => {
+                ch.addEventListener('click', () => {
                   ch.classList.toggle('can');
                   const el3 = ch.parentNode;
+                  const nex = el3.querySelector('#content3 h2').textContent;
+                  const nex2 = el3.querySelector('p').textContent;
                   if (ch.checked) {
                     el3.classList.add('checked');
+                    tab.push({ nex,nex2 });
+                    console.log(tab);
                   } else {
                     el3.classList.remove('checked');
+                    tab = tab.filter(item => item.nex !== nex);
+                    console.log(tab);
                   }
-                })
-              })
+                });
+              });
+              
               
               next.addEventListener('click',()=>{
-
                 sum = 0;
                 check.forEach(ch=>{
                   if (ch.classList.contains('can')) {
@@ -273,15 +274,63 @@ document.addEventListener("DOMContentLoaded", function() {
                 let can3AsString = sum.toString();
                 console.log(can3AsString);
                 const step_4 = document.createElement('div');
+                console.log(window.b);
                 step_4.id = 'step_4';
                 step_4.innerHTML = `
                   <h1 id='main_title'>Finishing up</h1>
                   <h5 id='main_h5'>Double-check everything looks OK before confirming.</h5>
-                  <div id="sumapl">${sum}</div>
+                  <div id="suma">
+                    <div id="sumapl">
+                      <b>
+                        ${type}(${switch_result})
+                      </b>
+                      <p>
+                        -$${window.b}/mo
+                      <p>
+                    </div>
+                    <div id="line"></div>
+
+                    <div id="elem123">123</div>
+
+
+
+                    <div id="sumapl">${sum}</div>
+                  </div>
+                  <div id='buttons4'>
+                    <button id='return4'>Go Back</button>
+                    <button id='Next4'>Next Step</button>
+                  </div>
                 `;
+                
+                setTimeout(() => {
+                  const diva = document.querySelector("#elem123");
+                  console.log(diva);
+                  function renderItems() {
+                    tab.forEach(item => {
+                      const itemDiv = document.createElement('div');
+                      itemDiv.id = 'item';
+                      itemDiv.innerHTML = `
+                        <div>${item.nex}</div>
+                        <div>${item.nex2}</div>`;
+                      diva.appendChild(itemDiv);
+                    });
+                  }
+                  renderItems()
+                }, 100);
+
+
+
                 main.removeChild(step_3);
                 main.appendChild(step_4);
                 console.log(sum);
+                const next = document.getElementById('Next4');
+                const back = document.getElementById('return4');
+                back.addEventListener('click',()=>{
+                  main.appendChild(step_3);
+                  if (main.contains(step_4)) {
+                    main.removeChild(step_4);
+                  }
+                })
               })
             }
           })

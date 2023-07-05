@@ -268,4 +268,84 @@ body{
             }
         }
     }
+    #step_4{
+        #suma{
+            width: 100%;
+            background-color: #F5F5F5;
+            border-radius: 7px;
+            padding: 8px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            #sumapl{
+                padding: 0 10px;
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                b{
+                    width: 70%;
+                    color: #220f75;  
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                p{
+                    display: flex;
+                    justify-content: flex-end;
+                    color: #220f75;  
+                    font-weight: bold;
+                    font-size: 15px;
+                }
+            }
+            #line{
+                margin: 0px auto 30px ;
+                width: 90%;
+                height: 1px;
+                background:#FEA1A1;
+            }
+        }
+        #buttons4{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 5px;
+            #Next4{
+                display: flex;
+                justify-content: flex-end;
+                padding: 12px 20px;
+                border-radius: 5px;
+                background-color: #c7baba;
+                border: none;
+                transition: 0.3s;
+                color: white;
+                font-size: 20px;
+            }
+            #return4{
+                display: flex;
+                justify-content: flex-end;
+                padding: 12px 20px;
+                border-radius: 5px;
+                border: none;
+                background: none;
+                transition: 0.3s;
+                color: #c7baba;
+                font-size: 20px;
+            }
+            #return4:hover, #Next4:hover{
+                background-color: #0079FF;
+            }
+        }
+        #elem123{
+            padding: 0 20px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            #item{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
 }
