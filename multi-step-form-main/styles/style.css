@@ -1,18 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
+head {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: grey;
+  background-color: #DAFFFB;
   font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 #container {
   max-width: 1100px;
+  min-width: 1100px;
   width: 80%;
   display: flex;
   flex-direction: row;
   margin: 5% auto 0 auto;
   border-radius: 15px;
   background-color: azure;
+  height: 65vh;
 }
 #container #lines {
   background: url("../assets/images/bg-sidebar-desktop.svg");
@@ -70,8 +79,11 @@ body {
   color: white;
 }
 #container #main {
-  padding: 50px 150px;
-  width: 60%;
+  padding: 0 150px;
+  height: 100%;
+  width: 66%;
+  display: flex;
+  align-items: center;
   border-radius: 15px;
   background-color: white;
 }
@@ -107,6 +119,7 @@ body {
 }
 #container #main div form #but {
   align-items: flex-end;
+  margin: 75px 0 0 0;
 }
 #container #main div form #sub1 {
   display: flex;
@@ -127,6 +140,7 @@ body {
 #container #step_2 {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 #container #step_2 #options {
   display: flex;
@@ -192,6 +206,9 @@ body {
 #container #step_2 #buttons2 #return2:hover, #container #step_2 #buttons2 #Next2:hover {
   background-color: #0079FF;
 }
+#container #step_3 {
+  width: 90%;
+}
 #container #step_3 form {
   display: flex;
   flex-direction: column;
@@ -235,13 +252,13 @@ body {
 #container #step_3 form #el3.checked {
   background-color: #ECF2FF;
 }
-#container #step_3 #buttons3 {
+#container #step_3 #buttons2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 5px;
 }
-#container #step_3 #buttons3 #Next3 {
+#container #step_3 #buttons2 #Next3 {
   display: flex;
   justify-content: flex-end;
   padding: 12px 20px;
@@ -252,7 +269,7 @@ body {
   color: white;
   font-size: 20px;
 }
-#container #step_3 #buttons3 #return3 {
+#container #step_3 #buttons2 #return3 {
   display: flex;
   justify-content: flex-end;
   padding: 12px 20px;
@@ -263,11 +280,11 @@ body {
   color: #c7baba;
   font-size: 20px;
 }
-#container #step_3 #buttons3 #return3:hover, #container #step_3 #buttons3 #Next3:hover {
+#container #step_3 #buttons2 #return3:hover, #container #step_3 #buttons2 #Next3:hover {
   background-color: #0079FF;
 }
 #container #step_4 #suma {
-  width: 100%;
+  width: 97%;
   background-color: #F5F5F5;
   border-radius: 7px;
   padding: 8px;
@@ -277,10 +294,9 @@ body {
   flex-direction: column;
 }
 #container #step_4 #suma #sumapl {
-  padding: 0 10px;
-  width: 90%;
+  width: 98%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 #container #step_4 #suma #sumapl b {
@@ -297,18 +313,21 @@ body {
   font-size: 15px;
 }
 #container #step_4 #suma #line {
-  margin: 0px auto 30px;
+  margin: 0px auto 15px;
   width: 90%;
   height: 1px;
   background: #FEA1A1;
 }
-#container #step_4 #buttons4 {
+#container #step_4 #suma #item {
+  margin: 3px;
+}
+#container #step_4 #buttons22 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 5px;
 }
-#container #step_4 #buttons4 #Next4 {
+#container #step_4 #buttons22 #Next4 {
   display: flex;
   justify-content: flex-end;
   padding: 12px 20px;
@@ -319,7 +338,7 @@ body {
   color: white;
   font-size: 20px;
 }
-#container #step_4 #buttons4 #return4 {
+#container #step_4 #buttons22 #return4 {
   display: flex;
   justify-content: flex-end;
   padding: 12px 20px;
@@ -330,7 +349,7 @@ body {
   color: #c7baba;
   font-size: 20px;
 }
-#container #step_4 #buttons4 #return4:hover, #container #step_4 #buttons4 #Next4:hover {
+#container #step_4 #buttons22 #return4:hover, #container #step_4 #buttons22 #Next4:hover {
   background-color: #0079FF;
 }
 #container #step_4 #elem123 {
@@ -343,4 +362,127 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+#container #step_4 #total {
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#container #step_4 #total p {
+  font-size: 15px;
+}
+#container #step_4 #total b {
+  color: #0079FF;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 850px) {
+  #container #main div form #but {
+    align-items: flex-end;
+    margin: 0 0 0 0;
+    width: 380px;
+  }
+  #container {
+    min-width: 85%;
+    height: 75vh;
+  }
+  #container div #main_title {
+    font-size: 40px;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+    color: #220f75;
+  }
+  #container div #main_h5 {
+    font-size: 17px;
+    color: rgb(94, 94, 94);
+    padding: 0;
+    margin: 0 0 25px 0;
+  }
+  #container div form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 25px 0;
+  }
+  #container div form div label {
+    font-weight: 800;
+  }
+  #container div form div input {
+    width: 350px;
+  }
+  #container #lines {
+    width: 50%;
+  }
+  #container #lines ul li #text h2 {
+    font-size: 16px;
+    color: white;
+  }
+  #container #main {
+    width: 80%;
+    padding: 0 100px;
+  }
+  #container #step_3 #buttons3 {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1140px) {
+  #container #step_3 form #el3 div h2 {
+    font-size: 15px;
+  }
+  #container #step_3 form #el3 div h4 {
+    font-size: 11px;
+  }
+  #container #step_3 #buttons3 {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #container #main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  }
+  #container {
+    transform: translateY(-70px);
+    min-width: 65%;
+    margin: 0 auto;
+    height: 55vh;
+  }
+  #container #lines {
+    display: none;
+  }
+  #container #step_3 #buttons3 {
+    margin-top: 20px;
+  }
+  #container #main div form div {
+    width: 100%;
+  }
+  #container #main div form div input {
+    height: 40px;
+    font-size: 25px;
+  }
+  #container #main div form #but {
+    align-items: flex-end;
+    margin: 15px 0 0 0;
+  }
+  #container #main div form #sub1 {
+    display: flex;
+    justify-content: flex-end;
+    width: -moz-min-content;
+    width: min-content;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: rgb(143, 135, 135);
+    border: none;
+    transition: 0.3s;
+    color: white;
+    font-size: 30px;
+    height: 55px;
+  }
 }/*# sourceMappingURL=style.css.map */

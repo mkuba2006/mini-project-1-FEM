@@ -1,17 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+head{
+    margin: 0;
+    padding: 0;
+}
 body{
-    background-color: grey;
+    background-color: #DAFFFB;
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 #container{
     max-width: 1100px;
+    min-width: 1100px;
     width: 80%;
     display: flex;
     flex-direction: row;
     margin: 5% auto 0 auto;
     border-radius: 15px;
     background-color: azure;
+    height: 65vh;
     #lines{
         background: url('../assets/images/bg-sidebar-desktop.svg');
         background-repeat: no-repeat;
@@ -68,8 +76,11 @@ body{
         }
     }
     #main{
-        padding: 50px 150px;
-        width: 60%;
+        padding: 0 150px;
+        height: 100%;
+        width: 66%;
+        display: flex;
+        align-items: center;
         border-radius: 15px;
         background-color: white;
         div{
@@ -106,6 +117,7 @@ body{
                 }
                 #but{
                     align-items: flex-end;
+                    margin: 75px 0 0 0;
                 }
                 #sub1{
                     display: flex;
@@ -128,6 +140,7 @@ body{
     #step_2{
         display: flex;
         flex-direction: column;
+        width: 100%;
         #options{
             display: flex;
             flex-direction: row; 
@@ -194,6 +207,7 @@ body{
         }
     }
     #step_3{
+        width: 90%;
         form{
             display: flex;
             flex-direction: column;
@@ -236,7 +250,7 @@ body{
                 background-color: #ECF2FF;
             }
         }
-        #buttons3{
+        #buttons2{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -270,7 +284,7 @@ body{
     }
     #step_4{
         #suma{
-            width: 100%;
+            width: 97%;
             background-color: #F5F5F5;
             border-radius: 7px;
             padding: 8px;
@@ -279,10 +293,9 @@ body{
             align-items: center;
             flex-direction: column;
             #sumapl{
-                padding: 0 10px;
-                width: 90%;
+                width: 98%;
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 align-items: center;
                 b{
                     width: 70%;
@@ -299,13 +312,16 @@ body{
                 }
             }
             #line{
-                margin: 0px auto 30px ;
+                margin: 0px auto 15px ;
                 width: 90%;
                 height: 1px;
                 background:#FEA1A1;
             }
+            #item{
+                margin: 3px;
+            }
         }
-        #buttons4{
+        #buttons22{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -347,5 +363,152 @@ body{
                 justify-content: space-between;
             }
         }
+        #total{
+            padding: 0 0 0 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            p{
+                font-size: 15px;
+            }
+            b{
+                color: #0079FF; 
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) and (min-width: 850px){
+    #container #main div form #but{
+        align-items: flex-end;
+        margin: 0 0 0 0;
+        width: 380px;
+    }
+    #container{
+        min-width: 85%;
+        height: 75vh;
+        div{
+            #main_title{
+                font-size: 40px;
+                font-weight: 900;
+                padding: 0;
+                margin: 0;
+                color: #220f75;;
+            }
+            #main_h5{
+                font-size: 17px;
+                color: rgb(94, 94, 94);
+                padding: 0;
+                margin: 0 0 25px 0;
+            }
+            form{
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin: 25px 0;
+                    label{
+                        font-weight: 800;
+                    }
+                    input{
+                        width: 350px;
+                    }
+                }
+            }
+        }
+        #lines{
+            width: 50%;
+            ul{
+                li{
+                    #text{
+                        h2{
+                            font-size: 16px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        #main{
+            width: 80%;
+            padding: 0 100px;
+        }
+    }
+    #container #step_3 #buttons3 {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 1140px) {
+    #container #step_3 form #el3 div h2 {
+        font-size: 15px;
+    }
+    #container #step_3 form #el3 div h4 {
+        font-size: 11px;
+    }
+    #container #step_3 #buttons3 {
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 850px) {
+    
+    #container #main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+    #container{
+        transform: translateY(-70px);
+        min-width: 65%;
+        margin: 0 auto;
+        height: 55vh;
+        #lines{
+            display: none;
+        }
+    }
+    #container #step_3 #buttons3 {
+        margin-top: 20px;
+    }
+    #container #main div form {
+        div{
+            width: 100%;
+            input {
+                height: 40px;
+                font-size: 25px;
+            }
+        }
+    }
+    
+    #container #main div form #but {
+        align-items: flex-end;
+        margin: 15px 0 0 0;
+    }
+    #container #main div form #sub1 {
+        display: flex;
+        justify-content: flex-end;
+        width: min-content;
+        padding: 12px 20px;
+        border-radius: 5px;
+        background-color: rgb(143, 135, 135);
+        border: none;
+        transition: 0.3s;
+        color: white;
+        font-size: 30px;
+        height: 55px;
     }
 }
