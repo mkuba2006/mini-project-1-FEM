@@ -59,22 +59,22 @@ body {
   color: black;
   background: white;
 }
-#container #lines ul li #text {
+#container #lines ul li #text1, #container #lines ul li #text2, #container #lines ul li #text3, #container #lines ul li #text4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#container #lines ul li #text h4, #container #lines ul li #text h2 {
+#container #lines ul li #text1 h4, #container #lines ul li #text1 h2, #container #lines ul li #text2 h4, #container #lines ul li #text2 h2, #container #lines ul li #text3 h4, #container #lines ul li #text3 h2, #container #lines ul li #text4 h4, #container #lines ul li #text4 h2 {
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: flex-start;
 }
-#container #lines ul li #text h4 {
+#container #lines ul li #text1 h4, #container #lines ul li #text2 h4, #container #lines ul li #text3 h4, #container #lines ul li #text4 h4 {
   font-size: 10px;
   color: rgb(189, 187, 187);
 }
-#container #lines ul li #text h2 {
+#container #lines ul li #text1 h2, #container #lines ul li #text2 h2, #container #lines ul li #text3 h2, #container #lines ul li #text4 h2 {
   font-size: 20px;
   color: white;
 }
@@ -427,7 +427,7 @@ body {
   #container #lines {
     width: 50%;
   }
-  #container #lines ul li #text h2 {
+  #container #lines ul li #text1 h2, #container #lines ul li #text2 h2, #container #lines ul li #text3 h2, #container #lines ul li #text4 h2 {
     font-size: 16px;
     color: white;
   }
