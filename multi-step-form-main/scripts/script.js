@@ -196,7 +196,6 @@ if(window.innerWidth<850){
   })
   
 
-
   document.getElementById('L').append(li);
   step_2.innerHTML = `
   <h1 id='main_title'> Select your plan</h1>
