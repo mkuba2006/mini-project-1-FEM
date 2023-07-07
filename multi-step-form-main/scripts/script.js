@@ -153,6 +153,7 @@ li.innerHTML=`
   </ul>
 `
 
+
 const a = document.createElement('div');
 a.id='buttons2';
 a.innerHTML=`
@@ -165,8 +166,7 @@ b.innerHTML=`
   <button id='return3'>Go Back</button>
   <button id='Next3'>Next Step</button>
 `;
-
-
+console.log('les');
 
 if(window.innerWidth<850){
   document.getElementById('container').after(b);
@@ -180,6 +180,7 @@ if(window.innerWidth<850){
   const r3= document.getElementById('return3');
 
   but1.addEventListener('click', ()=>{
+    console.log('t');
     a.style.display='flex';
   })
   r2.addEventListener('click', ()=>{
@@ -194,7 +195,6 @@ if(window.innerWidth<850){
     a.style.display='flex';
   })
   
-
 
 
   document.getElementById('L').append(li);
@@ -308,7 +308,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const Name = () => { can2 = checkLength(name.value, 5);};
     const Mail = () => { can3 = checkLength(mail.value, 5);};
 
-
     mail.addEventListener('input', Mail);
     name.addEventListener('input', Name);
     phone.addEventListener('input', Number);
@@ -406,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
               const check = document.querySelectorAll('#check3');
               let tab = [];
-              check.forEach(ch => {
+              check.forEach((ch, index) => {
                 ch.addEventListener('click', () => {
                   ch.classList.toggle('can');
                   const el3 = ch.parentNode;
@@ -414,14 +413,15 @@ document.addEventListener("DOMContentLoaded", function() {
                   const nex2 = el3.querySelector('p').textContent;
                   if (ch.checked) {
                     el3.classList.add('checked');
-                    tab.push({ nex,nex2 });
+                    tab.push({ nex, nex2 });
                     console.log(tab);
                   } else {
                     el3.classList.remove('checked');
-                    tab = tab.filter(item => item.nex !== nex);
+                    tab = tab.filter((item, idx) => item.nex !== nex || idx === index);
                   }
                 });
               });
+              
               
               
               next.addEventListener('click',()=>{
@@ -463,6 +463,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <button id='Next4'>Confirm</button>
                   </div>
                 `;
+
                 
                 setTimeout(() => {
                   
@@ -543,7 +544,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     form1.addEventListener('submit', (e) => {e.preventDefault()});
 });
-  
 
 
 

@@ -144,6 +144,8 @@ body{
         #options{
             display: flex;
             flex-direction: row; 
+            flex-wrap: wrap;
+            gap: 10px;
             justify-content: space-around;
             margin-bottom: 30px;
             #Arcade, #Advanced, #Pro{
@@ -296,12 +298,20 @@ body{
                 width: 98%;
                 display: flex;
                 justify-content: space-evenly;
+                flex-wrap: wrap;
                 align-items: center;
                 b{
                     width: 70%;
                     color: #220f75;  
                     font-weight: bold;
+                    display: flex;
+                    flex-direction: column;
                     font-size: 20px;
+                    #change{
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: #0079FF;
+                    }
                 }
                 p{
                     display: flex;
@@ -309,6 +319,7 @@ body{
                     color: #220f75;  
                     font-weight: bold;
                     font-size: 15px;
+                    margin: 0;
                 }
             }
             #line{
@@ -501,7 +512,6 @@ body{
     #container #main div form #sub1 {
         display: flex;
         justify-content: flex-end;
-        width: min-content;
         padding: 12px 20px;
         border-radius: 5px;
         background-color: rgb(143, 135, 135);
@@ -510,5 +520,107 @@ body{
         color: white;
         font-size: 30px;
         height: 55px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #container #step_2 #options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    #container #step_2 #options #Arcade, #container #step_2 #options #Advanced, #container #step_2 #options #Pro{
+        padding: 10px;
+        margin: 3px;
+        min-width: 100px;
+        max-width: 100px;
+        #content{
+            padding: 10px;
+            h3{
+                font-size: 17px
+            }
+            h5{
+                font-size: 12px
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    
+    #container #main{
+        width: 100%;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+    #container{
+        transform: translateY(-70px);
+        min-width: 300px;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0;
+        height: auto;
+        #lines{
+            display: none;
+        }
+    }
+    #container #step_3 #buttons3 {
+        margin-top: 20px;
+    }
+    #container #main div form {
+        div{
+            width: 100%;
+            input {
+                height: 40px;
+                font-size: 25px;
+            }
+        }
+    }
+    
+    #container #main div form #but {
+        align-items: flex-end;
+        margin: 15px 0 0 0;
+    }
+    #container #main div form #sub1 {
+        display: flex;
+        justify-content: flex-end;
+        width: min-content;
+        padding: 18px 16px;
+        border-radius: 5px;
+        background-color: rgb(143, 135, 135);
+        border: none;
+        transition: 0.3s;
+        color: white;
+        font-size: 18px;
+        height: 55px;
+    }
+
+    #container #main div #main_title {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 40px;
+        font-weight: 900;
+        padding: 0;
+        margin: 0;
+        color: #220f75;
+    }
+    #container #main div #main_h5 {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 15px;
+        font-weight: 900;
+        padding: 0;
+        margin: 0;
+        color: #220f75;
+    }
+    #container #main div form div input {
+        height: 40px;
+        font-size: 20px;
     }
 }
